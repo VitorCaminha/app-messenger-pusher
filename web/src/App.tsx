@@ -88,9 +88,10 @@ function App() {
   return (
     <>
       <h1>Pusher Messenger</h1>
-      <div>
+      <div id="name">
         <h2>Seu Nome:</h2>
         <input
+          id="nameInput"
           type="text"
           placeholder="Coloque seu nome aqui"
           value={user}
@@ -98,15 +99,15 @@ function App() {
         />
       </div>
 
-      <div>
+      <div id="conversation">
         <h2>Conversa</h2>
         <section>
           {messages.map(message => <Message message={message} key={message.id} />)}
         </section>
       </div>
       <form onSubmit={handleSend}>
-        <input
-          type="text"
+        <textarea
+          id="messageInput"
           placeholder="Digite sua mensagem"
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
