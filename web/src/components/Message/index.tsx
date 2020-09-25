@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import './styles.css';
 
 interface IMessage {
   message: string;
@@ -14,9 +14,9 @@ interface Props {
 
 const Message: React.FC<Props> = ({ message }) => {
   return (
-    <div className={message.received ? 'white' : 'green'}>
-      <strong>{message.user}</strong>
-      <span>{message.message}</span>
+    <div id="message" className={message.received ? 'white' : 'red'}>
+      <strong className={message.received ? 'whiteText' : 'redText'}>{message.user}</strong>
+      <span className={message.received ? 'whiteText' : 'redText'}>{message.message}</span>
     </div>
   );
 }

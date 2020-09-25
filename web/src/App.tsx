@@ -33,6 +33,8 @@ function App() {
 
     if (!oldId) {
       oldId = uuid();
+
+      localStorage.setItem('id', oldId);
     }
 
     setId(oldId);

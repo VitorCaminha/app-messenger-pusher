@@ -1,0 +1,40 @@
+#message {
+  padding: 5px 10px;
+  margin-top: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-width: 75%;
+  border-radius: 15px;
+}
+
+.white {
+  background: #f5f5f5;
+  border-top-left-radius: 5px !important;
+}
+
+.red {
+  background: var(--lighter-red);
+  border-top-right-radius: 5px !important;
+  align-self: flex-end !important;
+  align-items: flex-end;
+  text-align: right;
+}
+
+strong {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+span {
+  font-size: 16px;
+}
+
+.whiteText {
+  color: var(--blue);
+}
+
+.redText {
+  color: #f5f5f5;
+}
