@@ -6,10 +6,10 @@ import mongoose from 'mongoose';
 import Message from './schema/messages';
 
 const pusher = new Pusher({
-  appId: '1078874',
-  key: '27df506d1257527f2d11',
-  secret: '0386f9b924f7d24c691a',
-  cluster: 'us2',
+  appId: process.env.PUSHER_APPID,
+  key: process.env.PUSHER_KEY,
+  secret: process.env.PUSHER_SECRET,
+  cluster: process.env.PUSHER_CLUSTER,
   useTLS: true
 });
 
